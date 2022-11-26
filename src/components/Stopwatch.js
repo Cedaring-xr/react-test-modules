@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Stopwatch() {
     const [time, setTime] = useState(0)
@@ -24,24 +24,26 @@ function Stopwatch() {
 
   return (
     <>
-        <h1>Stopwatch</h1>
-        <div style={numberStyle}>
-            <h1>{('0' + Math.floor((time / 60000) % 60)).slice(-2)}:</h1>
-            <h1>{('0' + Math.floor((time / 1000) % 60)).slice(-2)}:</h1>
-            <h1>{('0' + ((time / 10) % 100)).slice(-2)}</h1>
-        </div>
-        {!running && time === 0 && (
-            <button onClick={() => setRunning(true)}>start</button>
-        )}
-        {running && (
-            <button onClick={() => setRunning(false)}>stop</button>
-        )}
-        {running || time !== 0 && (
-            <button onClick={() => setRunning(true)}>resume</button>
-        )}
-        {running || time > 0 && (
-            <button onClick={() => setTime(0)}>reset</button>
-        )}
+        <section>
+            <h1>Stopwatch</h1>
+            <div style={numberStyle}>
+                <h1>{('0' + Math.floor((time / 60000) % 60)).slice(-2)}:</h1>
+                <h1>{('0' + Math.floor((time / 1000) % 60)).slice(-2)}:</h1>
+                <h1>{('0' + ((time / 10) % 100)).slice(-2)}</h1>
+            </div>
+            {!running && time === 0 && (
+                <button onClick={() => setRunning(true)}>start</button>
+            )}
+            {running && (
+                <button onClick={() => setRunning(false)}>stop</button>
+            )}
+            {running || time !== 0 && (
+                <button onClick={() => setRunning(true)}>resume</button>
+            )}
+            {running || time > 0 && (
+                <button onClick={() => setTime(0)}>reset</button>
+            )}
+        </section>
     </>
   )
 }

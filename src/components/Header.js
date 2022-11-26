@@ -4,9 +4,7 @@ function Header() {
   return (
     <>
         <section className='header-main'>
-            
-            <div>Header</div>
-            <h3>Practice with react components and testing</h3>
+            <h3 className='title'>Practice with react components and testing</h3>
         </section>
     </>
   )

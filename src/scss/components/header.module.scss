@@ -1,0 +1,24 @@
+@use '../abstracts';
+
+
+.header-main {
+    background-color: #e6e6e6;
+    outline: 2 px solid #888;
+    height: 90px;
+    margin: 0;
+
+    .title {
+        color: rgb(26, 17, 17);
+        font-size: 2rem;
+    }
+
+    .content {
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        width: 97%;
+        height: 97%;
+        background-color: #d0d2d4;
+        border-radius: 10px;
+    }
+}
