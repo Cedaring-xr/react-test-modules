@@ -42,7 +42,7 @@ function DotMaker() {
 
   return (
     <>
-        <section>
+        <section className='dots'>
             <h2>DotMaker</h2>
             <p>click anywhere in the box below.</p>
             <button onClick={undo}>Undo</button>
