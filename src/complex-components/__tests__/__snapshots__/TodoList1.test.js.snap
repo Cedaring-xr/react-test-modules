@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot of TodoList 1`] = `
+<div
+  data-testid="todo-2"
+>
+  <strike>
+    <p>
+      test task 2
+    </p>
+  </strike>
+</div>
+`;

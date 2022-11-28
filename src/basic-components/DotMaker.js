@@ -35,11 +35,6 @@ function DotMaker() {
         return
     }
 
-    const circleBox = {
-        width: '100%',
-        height: '200px'
-    }
-
   return (
     <>
         <section className='dots'>
@@ -48,7 +43,7 @@ function DotMaker() {
             <button onClick={undo}>Undo</button>
             <button onClick={redo}>Redo</button>
             <span>count is {dots.length}</span>
-            <div style={circleBox} onClick={addCircle}>
+            <div onClick={addCircle}>
                 {dots.map((dot, index) => (
                     <div key={index} className='dot-cicle' style={{
                         left: dot.x + "px",

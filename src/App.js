@@ -1,12 +1,13 @@
 import './App.scss';
-import Stopwatch from './components/Stopwatch';
-import Header from './components/Header';
-import DotMaker from './components/DotMaker';
-import ReducerSection1 from './components/Reducer1';
-import SideMenu1 from './components/SideMenu1';
-import Footer from './components/Footer';
-import StopwatchRef from './components/StopwatchRef';
-import SideMenu2 from './components/SideMenu2';
+import Stopwatch from './basic-components/Stopwatch';
+import Header from './basic-components/Header';
+import DotMaker from './basic-components/DotMaker';
+import ReducerSection1 from './basic-components/Reducer1';
+import SideMenu1 from './basic-components/SideMenu1';
+import Footer from './basic-components/Footer';
+import StopwatchRef from './basic-components/StopwatchRef';
+import SideMenu2 from './basic-components/SideMenu2';
+import TodoList1 from './complex-components/todo1/TodoList1';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <ReducerSection1 />
         <SideMenu1 />
         <SideMenu2 />
+        <TodoList1 />
         <Footer />
       </div>
     </div>
