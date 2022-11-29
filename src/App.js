@@ -8,6 +8,9 @@ import Footer from './basic-components/Footer';
 import StopwatchRef from './basic-components/StopwatchRef';
 import SideMenu2 from './basic-components/SideMenu2';
 import TodoList1 from './complex-components/todo1/TodoList1';
+import TodoMultiLayer from './complex-components/todo2/TodoMain';
+import ToggleBtns from './basic-components/ToggleBtns';
+import Keypad from './basic-components/Keypad';
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
         <SideMenu1 />
         <SideMenu2 />
         <TodoList1 />
+        <TodoMultiLayer />
+        <ToggleBtns />
+        <Keypad />
         <Footer />
       </div>
     </div>

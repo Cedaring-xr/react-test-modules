@@ -12,7 +12,7 @@ test('should render non-completed todo', () => {
     render(<Todo1 todo={mockTodo}/>)
     const element = screen.getByTestId('todo-2')
     expect(element).toBeDefined();
-    expect(element).not.toContainHTML('<strike>')
+    expect(element).not.toContainHTML('strike')
 })
 
 test('should render completed todo', () => {
@@ -20,7 +20,7 @@ test('should render completed todo', () => {
     render(<Todo1 todo={mockTodo}/>)
     const element = screen.getByTestId('todo-2')
     expect(element).toBeDefined();
-    // expect(element).toContainHTML('<strike>') ?? contain partial not working??
+    expect(element).toContainHTML('strike')
 })
 
 // snapshot component testing

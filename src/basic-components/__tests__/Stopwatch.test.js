@@ -4,21 +4,22 @@ import Stopwatch from '../Stopwatch'
 
 
 describe('Stopwatch component functionality', () => {
-    render(<Stopwatch/>);
-
-
+    
     it('should start at 00',  () => {
-        const StopwatchElement = screen.getAllByTestId('stopwatch')
+        render(<Stopwatch/>);
+        const StopwatchElement = screen.getByTestId('stopwatch')
         expect(StopwatchElement).toBeDefined();
-        // expect(StopwatchElement).toHaveTextContent('Stopwatch')
+        expect(StopwatchElement).toHaveTextContent(/Stopwatch/i)
     })
 
     it('should be able to incriment time', () => {
+        render(<Stopwatch/>);
         const StartButton = screen.getAllByRole('button')
-        expect(StartButton).toBeGreaterThan(0);
+        const buttons = StartButton.length
+        expect(buttons).toBeGreaterThan(0);
     })
 
     it('should be able to stop time', () => {
-       
+        render(<Stopwatch/>);
     })
 })

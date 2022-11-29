@@ -8,7 +8,7 @@ describe('header component', () => {
     it('should display text', () => {
         render(<Header />) //no props
         const headingElement = screen.getByText(/practice/i) //regex
-        expect(headingElement).toBeInTheDocument()
+        expect(headingElement).toBeVisible()
     })
 
     it('should get text by role', () => {
@@ -20,7 +20,7 @@ describe('header component', () => {
     it('should get text by findBy', async () => {
         render(<Header />) //no props
         const headingText = await screen.findByText(/practice/i)
-        expect(headingText).toBeInTheDocument()
+        expect(headingText).toBeVisible()
     })
 
     it('should use query by', () => {
