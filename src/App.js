@@ -11,6 +11,7 @@ import TodoList1 from './complex-components/todo1/TodoList1';
 import TodoMultiLayer from './complex-components/todo2/TodoMain';
 import ToggleBtns from './basic-components/ToggleBtns';
 import Keypad from './basic-components/Keypad';
+import DragAndDrop from './basic-components/DragAndDrop';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <TodoMultiLayer />
         <ToggleBtns />
         <Keypad />
+        <DragAndDrop />
         <Footer />
       </div>
     </div>

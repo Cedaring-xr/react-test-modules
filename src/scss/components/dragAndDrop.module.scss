@@ -1,0 +1,30 @@
+
+
+.drag-container {
+    padding: 10px 100px 10px;
+}
+
+.draggable {
+    margin: 10px;
+    padding: 10px;
+    background-color: #b8b8b8;
+}
+
+.draggable p {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.hamburger {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.hamburger-line {
+    border: 1px solid black;
+    width: 40px;
+    height: 2px;
+    border-radius: 4px;
+    margin: 5px;
+    background-color: black;
+}

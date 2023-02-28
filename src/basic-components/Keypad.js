@@ -8,13 +8,14 @@ function Keypad() {
     const numList2 = Array.from(Array(10).keys())
 
     
-    const addNumInput = (num) => {
-        console.log(num)
+    const addNumInput = (number) => {
+        console.log(number)
     }
 
     const newCode = () => {
         console.log('new code')
-        const num = Math.floor(Math.random() * 10000)
+        const num = Math.floor(Math.random() * 10)
+        
         setGenerated(num)
     }
 
@@ -37,7 +38,7 @@ function Keypad() {
                 {numList2.map((number, index) => {
                     return (
                         <li key={index} className='grid-item'>
-                            <button className='key-btn' onClick={addNumInput}>{number}</button>
+                            <button className='key-btn'>{number}</button>
                         </li>
                     )
                 })}
