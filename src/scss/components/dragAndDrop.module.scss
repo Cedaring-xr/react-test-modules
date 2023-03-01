@@ -4,10 +4,23 @@
     padding: 10px 100px 10px;
 }
 
+.drag-container-half {
+    width: 40%;
+    margin: 20px;
+    display: inline-block;
+    border: 1px solid black;
+    min-height: 300px;
+}
+
+.dragging {
+    opacity: 0.5;
+}
+
 .draggable {
     margin: 10px;
     padding: 10px;
     background-color: #b8b8b8;
+    cursor: move;
 }
 
 .draggable p {

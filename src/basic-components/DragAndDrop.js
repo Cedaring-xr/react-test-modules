@@ -1,24 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 function DragAndDrop() {
-    const [draggableItems, setDraggableItems] = useState([])
+    const [draggableItems, setDraggableItems] = useState(['item1', 'item2', 'item3'])
 
-    function handleDrag() {
+    let draggingItem = useRef()
+    let dragOver = useRef()
 
+    function handleDrag(e, index) {
+        draggingItem = index
     }
 
-    function handleDrop() {
-
+    function handleDragOver(e, index) {
+        dragOver = index
     }
 
-    function handleDragOver() {
+    function handleDrop(e, index) {
 
     }
 
 
   return (
     <section data-testid="dragAndDrop">
-        <h1>Drag and Drop Stack</h1>
+        <h1>Drag re-order and add Stack</h1>
         <div className='add-drad-item'>
             <input type="text" name="draggable-item-name" placeholder='add item' />
             <button>Add Item</button>
@@ -26,43 +29,19 @@ function DragAndDrop() {
         <div className='drag-container'>
             {
                 draggableItems.map((item, index) => (
-                    <div key={index} >
+                    <div key={index} className="draggable" draggable="true"
+                        onDragStart={(e) => handleDrag(e, index)}
+                        onDragOver={(e) => handleDragOver(e, index)}
+                        onDragEnd={(e) => handleDrop(e, index)}>
+                        <div className='hamburger'>
+                            <div className='hamburger-line'></div>
+                            <div className='hamburger-line'></div>
+                            <div className='hamburger-line'></div>
+                        </div>
                         <p>{item}</p>
                     </div>
                 ))
             }
-            <div className='draggable' draggable='true' onDragStart={(e) => handleDrag(e, 'item1')}>
-                    <div className='hamburger'>
-                        <div className='hamburger-line'></div>
-                        <div className='hamburger-line'></div>
-                        <div className='hamburger-line'></div>
-                    </div>
-                    <p>Item 1</p>
-            </div>
-            <div className='draggable' draggable='true' onDragStart={(e) => handleDrag(e, 'item2')}>
-                <div className='hamburger'>
-                    <div className='hamburger-line'></div>
-                    <div className='hamburger-line'></div>
-                    <div className='hamburger-line'></div>
-                </div>
-                <p>Item 2</p>
-            </div>
-            <div className='draggable' draggable='true' onDragStart={(e) => handleDrag(e, 'item3')}>
-                <div className='hamburger'>
-                    <div className='hamburger-line'></div>
-                    <div className='hamburger-line'></div>
-                    <div className='hamburger-line'></div>
-                </div>
-                <p>Item 3</p>
-            </div>
-            <div className='draggable' draggable='true' onDragStart={(e) => handleDrag(e, 'item4')}>
-                <div className='hamburger'>
-                    <div className='hamburger-line'></div>
-                    <div className='hamburger-line'></div>
-                    <div className='hamburger-line'></div>
-                </div>
-                <p>Item 4</p>
-            </div>
         </div>
     </section>
   )
