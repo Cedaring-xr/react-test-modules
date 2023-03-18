@@ -1,0 +1,25 @@
+
+
+.star {
+    list-style: none;
+    display: inline;
+}
+
+.yellow-star {
+    fill: gold;
+    color: gold;
+}
+
+.rating-box {
+    display: flex;
+    border: 2px solid gray;
+    border-radius: 6px;
+    max-width: 600px;
+    flex-direction: column;
+    align-items: center;
+    background-color: #dbdbdb;
+}
+
+.rating-description {
+    padding: 10px;
+}

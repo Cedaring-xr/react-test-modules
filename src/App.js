@@ -13,6 +13,7 @@ import ToggleBtns from './basic-components/ToggleBtns';
 import Keypad from './basic-components/Keypad';
 import DragAndDrop from './basic-components/DragAndDrop';
 import DragNDrop2 from './basic-components/DragNDrop2';
+import StarRating from './basic-components/StarRating';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Keypad />
         <DragAndDrop />
         <DragNDrop2 />
+        <StarRating />
         <Footer />
       </div>
     </div>
