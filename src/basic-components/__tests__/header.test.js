@@ -12,7 +12,7 @@ describe('header component', () => {
     })
 
     it('should get text by role', () => {
-        render(<Header />) //no props
+        render(<Header />)
         const headingText = screen.getByRole('heading')
         expect(headingText).toBeInTheDocument()
     })
