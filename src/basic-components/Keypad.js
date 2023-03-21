@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 
 function Keypad() {
 
-    let [generated, setGenerated] = useState(null)
-    let [inputCode, setInputCode] = useState([])
+    const [generated, setGenerated] = useState(null)
+    const [inputCode, setInputCode] = useState([])
+    const [outputText, setOutputText] = useState('')
+
     const numList = Array.from(Array(10).keys())
 
     const newCode = () => {
@@ -12,37 +14,33 @@ function Keypad() {
             const num = Math.floor(Math.random() * 10)
             numArray.push(num)
         }
-        const code = numArray.map(String)
+        const code = numArray.map(Number)
         setGenerated(code)
     }
 
-    const clearCode = () => {
-        setGenerated('')
+    const inputNumber = (number) => {
+        if(inputCode.length < 4) {
+            setInputCode(arr => [...arr, number])
+        }
     }
 
     const clearInput = () => {
         setInputCode([])
+        setOutputText('')
     }
 
-    const inputNumber = (number) => {
-        // setInputCode(current => [...current, number])
-        setInputCode(inputCode => inputCode.concat(number))
-        console.log(inputCode)
-        // if inputArray = 4, set inputCode
+    const submitCode = () => {
         if(inputCode.length === 4) {
-            console.log('submitted')
             matchInput(inputCode)
-            clearInput()
+            setInputCode([])
         }
     }
 
     const matchInput = (inputCode) => {
-        console.log(inputCode)
-        console.log(generated)
-        if(inputCode === generated) {
-            console.log('success')
+        if(JSON.stringify(inputCode) === JSON.stringify(generated)) {  //comparing arrays in js is weird
+            setOutputText('Successful code entered')
         } else {
-            console.log('wrong code')
+            setOutputText('Incorrect code entered')
         }
     }
 
@@ -53,7 +51,7 @@ function Keypad() {
         </div>
         <div className='grid-container'>
             <button className='keypad-btn' onClick={newCode}>Generate New Code</button>
-            <button className='keypad-btn' onClick={clearCode}>Clear Generated Code</button>
+            <button className='keypad-btn' onClick={() => setGenerated('')}>Clear Generated Code</button>
             <button className='keypad-btn' onClick={clearInput}>Clear Input Code</button>
             <div className='4-digitCode'>
                 <p>generated code is: {generated}</p>
@@ -68,6 +66,8 @@ function Keypad() {
                     )
                 })}
             </ul>
+            <h3 className='keycode-check'>{outputText}</h3>
+            <button onClick={submitCode}>Submit Code</button>
         </div>
     </section>
   )

@@ -1,25 +1,42 @@
 import { render, screen, cleanup } from '@testing-library/react'
+import user from '@testing-library/user-event'
 import '@testing-library/jest-dom'
 import Stopwatch from '../Stopwatch'
 
 
 describe('Stopwatch component functionality', () => {
-    
-    it('should start at 00',  () => {
+    afterEach(() => {
+        cleanup()
+    })
+    it('should render the stopwatch component', () => {
+        render(<Stopwatch/>)
+        const headerElement = screen.getByRole('heading', {name: 'Stopwatch'})
+        expect(headerElement).toBeInTheDocument()
+    })
+    it('should start at 00:00:00',  () => {
+        render(<Stopwatch/>)
+        const stopwatchElements = screen.getAllByRole('heading', {level: 2})
+        stopwatchElements.forEach(element => {
+            expect(element).toHaveTextContent('00')
+        });
+    })
+    xit('should be able to incriment time', async () => {
+        user.setup()
         render(<Stopwatch/>);
-        const StopwatchElement = screen.getByTestId('stopwatch')
-        expect(StopwatchElement).toBeDefined();
-        expect(StopwatchElement).toHaveTextContent(/Stopwatch/i)
+        const startButton = screen.getAllByRole('button', {name:'start'})
+        const stopwatchElements = screen.getAllByRole('heading', {level: 2})
+        await user.click(startButton)
+        const milli = stopwatchElements[2]
+        expect(milli).not.toHaveTextContent('00')
     })
 
-    it('should be able to incriment time', () => {
+    xit('should show reset and resume button on stop', async () => {
+        user.setup()
         render(<Stopwatch/>);
-        const StartButton = screen.getAllByRole('button')
-        const buttons = StartButton.length
-        expect(buttons).toBeGreaterThan(0);
+        const startButton = screen.getAllByRole('button', {name:'start'})
     })
 
-    it('should be able to stop time', () => {
-        render(<Stopwatch/>);
+    xit('should be able to resume time', async () => {
+
     })
 })

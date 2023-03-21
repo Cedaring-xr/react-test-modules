@@ -8,17 +8,9 @@ export default function SideMenu1() {
         setMenu(!menu)
     }
 
-    useEffect(() => {
-        
-    }, [])
-
     const activePage = () => {
-        // console.log('tste')
+        setActive('page1')
     }
-
-    useLayoutEffect(() => {
-        //gsap animation stuff
-    }, [])
 
   return (
     <section>

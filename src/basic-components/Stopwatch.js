@@ -23,12 +23,12 @@ function Stopwatch() {
     }
 
   return (
-    <section data-testid="stopwatch">
+    <section>
         <h1>Stopwatch</h1>
         <div style={numberStyle}>
-            <h1>{('0' + Math.floor((time / 60000) % 60)).slice(-2)}:</h1>
-            <h1>{('0' + Math.floor((time / 1000) % 60)).slice(-2)}:</h1>
-            <h1>{('0' + ((time / 10) % 100)).slice(-2)}</h1>
+            <h2>{('0' + Math.floor((time / 60000) % 60)).slice(-2)}:</h2>
+            <h2>{('0' + Math.floor((time / 1000) % 60)).slice(-2)}:</h2>
+            <h2>{('0' + ((time / 10) % 100)).slice(-2)}</h2>
         </div>
         {!running && time === 0 && (
             <button onClick={() => setRunning(true)}>start</button>

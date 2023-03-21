@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import Header from '../Header'
+import Footer from '../Footer'
 
-describe('header component', () => {
+describe('footer component', () => {
     it('should render the component', () => {
-        render(<Header />) 
+        render(<Footer />) 
         const headingElement = screen.getByRole('heading', {level: 3})
         expect(headingElement).toBeInTheDocument()
-        expect(headingElement).toHaveTextContent('Practice with react components and testing')
+        expect(headingElement).toHaveTextContent('End')
     })
 })
