@@ -8,15 +8,19 @@ function ToggleBtns() {
     
     
   return (
-    <section>
+    <section className='toggle-section'>
         <div>
             <h3>ToggleBtns</h3>
         </div>
-        <ul>
-            <button className='toggle' onClick={() => {toggleRed(!isRed)}}>{ !isRed ? 'Light Red' : 'Dark Red' }</button>
-            <button className='toggle' onClick={() => {toggleGreen(!isGreen)}}>{ !isGreen ? 'Light Green' : 'Dark Green' }</button>
-            <button className='toggle' onClick={() => {toggleBlue(!isBlue)}}>{ !isBlue ? 'Light Blue' : 'Dark Blue' }</button>
-        </ul>
+        <div className={`color-change-box ${isRed ? 'dark-red' : 'light-red'}`}>
+            <button className='toggle-btn' onClick={() => {toggleRed(!isRed)}}>{ !isRed ? 'Light Red' : 'Dark Red' }</button>
+        </div>
+        <div className={`color-change-box ${isGreen ? 'dark-green' : 'light-green'}`}>
+            <button className='toggle-btn' onClick={() => {toggleGreen(!isGreen)}}>{ !isGreen ? 'Light Green' : 'Dark Green' }</button>
+        </div>
+        <div className={`color-change-box ${isBlue ? 'dark-blue' : 'light-blue'}`}>
+            <button className='toggle-btn' onClick={() => {toggleBlue(!isBlue)}}>{ !isBlue ? 'Light Blue' : 'Dark Blue' }</button>
+        </div>
     </section>
   )
 }

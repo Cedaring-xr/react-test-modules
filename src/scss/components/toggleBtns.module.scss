@@ -1,0 +1,44 @@
+
+.toggle-section {
+    .color-change-box {
+        width: 150px;
+        height: 100px;
+        border: 1px solid black;
+        margin: 1rem;
+        border-radius: 0.5em;
+        display: inline-block;
+    
+        .toggle-btn {
+            margin: 5px auto;
+            display: flex;
+            justify-content: center;
+            border-radius: 6px;
+            padding: 5px;
+            background-color: aliceblue;
+        }
+    }
+    
+    .light-red {
+        background-color: #ca4949;
+    }
+    
+    .dark-red {
+        background-color: #a00606;
+    }
+    
+    .light-green {
+        background-color: #72cc6a;
+    }
+
+    .dark-green {
+        background-color: #218d06;
+    }
+
+    .light-blue {
+        background-color: #6f99d1;
+    }
+
+    .dark-blue {
+        background-color: #082b8b;
+    }
+}

@@ -42,8 +42,8 @@ function DotMaker() {
             <p>click anywhere in the box below.</p>
             <button onClick={undo}>Undo</button>
             <button onClick={redo}>Redo</button>
-            <span>count is {dots.length}</span>
-            <div onClick={addCircle}>
+            <span>count is: {dots.length}</span>
+            <div className='dot-box' role='customBox' onClick={addCircle}>
                 {dots.map((dot, index) => (
                     <div key={index} className='dot-cicle' style={{
                         left: dot.x + "px",
