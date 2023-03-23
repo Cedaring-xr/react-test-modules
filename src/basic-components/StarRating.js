@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect } from 'react';
+import React, { useState } from 'react';
 
 function Star({yellow}) {
     return (
@@ -29,7 +29,7 @@ export default function StarRating() {
                             )
                         })}
                     </ul>
-                    <p className='rating-description'>{`give this widget ${rating} stars`}</p>
+                    <p className='rating-description'>{`current rating: ${rating} stars`}</p>
                     <button onClick={() => setRating(0)}>clear rating</button>
                 </div>
             </div>
