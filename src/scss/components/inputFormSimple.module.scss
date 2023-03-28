@@ -1,0 +1,87 @@
+
+
+.input-form {
+    display: inline-grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 1;
+    gap: 2rem;
+    padding: 10px;
+
+    .form-container {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        outline: 1px solid #3b3b3b;
+        border-radius: 6px;
+        min-height: 300px;
+        padding: 20px;
+        min-width: 400px;
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            .form-error {
+                color: #e21a1a;
+                font-weight: bold;
+            }
+
+            label {
+                margin-top: 5px;
+            }
+
+            input {
+                margin: 2px;
+                font-size: 1.1rem;
+            }
+
+            select {
+                text-align: center;
+                font-size: 1rem;
+                width: 70%;
+
+                option {
+                    text-align: left;
+                }
+            }
+
+            #age {
+                width: 30%;
+            }
+
+            .checkbox-area {
+                padding: 10px;
+
+                label {
+                    padding-left: 5px;
+                }
+            }
+
+            button {
+                margin: 20px auto 0;
+                width:30%;
+            }
+        }
+    }
+    
+    .output-container {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        outline: 1px solid #3b3b3b;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+
+        .form-info {
+            border: 1px solid black;
+            min-height: 250px;
+            margin: 4px;
+        }
+
+        button {
+            margin: 20px auto 0;
+            width:40%;
+        }
+    }
+}
