@@ -35,7 +35,7 @@ const InputFormSimple = () => {
                 <label htmlFor='last-name'>Last Name</label>
                 <input name='last-name' type='text' placeholder='Smith'></input>
                 <label htmlFor='age'>Age Select</label>
-                <select name='age' id='age' type='number'>
+                <select name='age' id='age' type='number' role='menu'>
                   <option> Select Age </option>
                   {
                     currentAge.map((age, index) => {
@@ -46,7 +46,7 @@ const InputFormSimple = () => {
                   }
                 </select>
                 <label htmlFor='country'>Country</label>
-                <select name='country' type='dropdown' placeholder='-- Select Country --'>
+                <select name='country' type='dropdown' role='menu'>
                       <option>-- Select Country --</option>
                       {
                         currentCountries.map((country, index) => {
