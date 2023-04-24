@@ -15,6 +15,7 @@ import DragAndDrop from './basic-components/DragAndDrop';
 import DragNDrop2 from './basic-components/DragNDrop2';
 import StarRating from './basic-components/StarRating';
 import InputFormSimple from './basic-components/InputFormSimple';
+import KeypadLayout from './complex-components/runescapeKeypad/keypadLayout';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <TodoMultiLayer />
         <ToggleBtns />
         <Keypad />
+        <KeypadLayout />
         <DragAndDrop />
         <DragNDrop2 />
         <StarRating />

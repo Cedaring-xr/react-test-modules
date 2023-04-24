@@ -26,3 +26,58 @@
         }
     }
 }
+
+
+.runescape-keypad-bankcode {
+
+
+
+    .outer-grid-container {
+
+        .keypad-btn {
+
+        }
+
+        .code-output {
+
+        }
+
+        .outer-grid {
+            width: 400px;
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            .key-btn {
+                background-color: #9b2e2e;
+
+                .inner-grid {
+                    width: 75px;
+                    height: 75px;
+
+                    td {
+                        font-size: 1rem;
+                        font-weight: bold;
+                        
+                    }
+                    .visible {
+                        color: white;
+                    }
+
+                    .hidden {
+                        color: #9b2e2e;
+                    }
+                }
+            }
+
+            .grid-item:last-child {
+                grid-column-start: 2;
+            }
+
+            
+        }
+
+        
+
+    }
+}
