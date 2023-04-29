@@ -16,12 +16,14 @@ import DragNDrop2 from './basic-components/DragNDrop2';
 import StarRating from './basic-components/StarRating';
 import InputFormSimple from './basic-components/InputFormSimple';
 import KeypadLayout from './complex-components/runescapeKeypad/keypadLayout';
+import RadialMenu from './basic-components/RadialMenu';
 
 function App() {
   return (
     <div className="App">
       <Header />
       <div className='body'>
+        <RadialMenu />
         <Stopwatch />
         <StopwatchRef />
         <DotMaker />
