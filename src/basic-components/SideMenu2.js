@@ -8,14 +8,6 @@ export default function SideMenu2() {
         setMenu(!menu)
     }
 
-    useEffect(() => {
-        
-    }, [])
-
-    useLayoutEffect(() => {
-        //gsap animation stuff
-    }, [])
-
   return (
     <section>
         <div className='widget-box'>
