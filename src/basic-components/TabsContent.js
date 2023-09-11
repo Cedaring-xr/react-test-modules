@@ -10,12 +10,17 @@ const TabsContent = () => {
 	}
 
 	const addTab = () => {
-		console.log('adding tab')
 		const newTab = {
-			text: 'new tab'
+			number: tabCount.length + 1
 		}
 		setTabCount([...tabCount, newTab])
 		showTab(tabCount.length + 1)
+	}
+
+	const removeTab = (index) => {
+		//find tab that corresponds to index
+		//remove tab from array
+		//return updated array without tab
 	}
 
 	return (
@@ -23,16 +28,31 @@ const TabsContent = () => {
 			<div className="widget-box">
 				<h1>Dynamic Tabs</h1>
 				<button onClick={() => addTab()}>Add Tab</button>
-				{tabCount.map((tab) => (
-					<div className="tabs" key={tab.id}></div>
-				))}
-				<div className="tabs-content">
-					<h2>Content</h2>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-						laboris nisi ut aliquip ex ea commodo consequat.
-					</p>
+				<div className="tabs-container">
+					{tabCount.map((tab) => (
+						<div>
+							<div
+								className={activeTab === tab.number ? 'active-tab tabs' : 'tabs'}
+								key={tab.id}
+								onClick={() => showTab(tab.number)}
+							>
+								<p className="tab-content">{tab.number}</p>
+							</div>
+						</div>
+					))}
+				</div>
+				<div className="content-container">
+					{tabCount.map((tab) => (
+						<div className={activeTab === tab.number ? 'active-content' : 'content'}>
+							<h2>Content #{tab.number}</h2>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</p>
+							<button onClick={() => removeTab(tab.number)}>Remove Tab</button>
+						</div>
+					))}
 				</div>
 			</div>
 		</section>
