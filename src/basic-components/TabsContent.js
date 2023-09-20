@@ -18,6 +18,7 @@ const TabsContent = () => {
 	}
 
 	const removeTab = (index) => {
+		const updatedTabs = tabCount.filter
 		//find tab that corresponds to index
 		//remove tab from array
 		//return updated array without tab

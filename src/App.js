@@ -18,6 +18,7 @@ import InputFormSimple from './basic-components/InputFormSimple'
 import KeypadLayout from './complex-components/runescapeKeypad/keypadLayout'
 import RadialMenu from './basic-components/RadialMenu'
 import TabsContent from './basic-components/TabsContent'
+import NestedDropMenu from './basic-components/NestedDropMenu'
 
 function App() {
 	return (
@@ -41,6 +42,7 @@ function App() {
 				<StarRating />
 				<InputFormSimple />
 				<TabsContent />
+				<NestedDropMenu />
 				<Footer />
 			</div>
 		</div>
